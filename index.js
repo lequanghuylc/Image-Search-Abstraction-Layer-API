@@ -1,7 +1,7 @@
 var express= require("express");
 var app = express();
 var imageApi = require("./imageapi");
-var mongoUrl = "mongodb://localhost:27017/imagesearch";
+var mongoUrl = process.env.MONGODB_URI;
 var mongo = require("mongodb").MongoClient;
 
 app.use("/", express.static(__dirname + "/public"));
@@ -61,4 +61,5 @@ app.use(function(req,res){
        res.redirect("/");
    }
 });
-app.listen(8080);
+var port = process.env.PORT || 8080;
+app.listen(port);

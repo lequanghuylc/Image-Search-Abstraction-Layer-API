@@ -2,6 +2,9 @@
   "name": "workspace",
   "version": "1.0.0",
   "description": "Node application that return json of searched images",
+  "engines": {
+    "node": "4.4.5"
+  },
   "main": "index.js",
   "dependencies": {
     "express": "^4.14.0",
@@ -10,7 +13,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
